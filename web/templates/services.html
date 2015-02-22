@@ -1,6 +1,15 @@
 {% extends "template.html" %}
 {% load staticfiles %}
 
+{% block menu %}
+  <ul class="nav navbar-nav navbar-right">
+      <li><a href=" {% url 'home' %} ">Home </a></li>
+      <li><a href=" {% url 'services' %} " class="navbar-active">Serveis</a></li>
+      <li><a href=" {% url 'about' %} ">Qui som</a></li>
+      <li><a href=" {% url 'contact' %} ">Contacte</a></li>
+  </ul>
+{% endblock %}
+
 {% block content %}
 <div class="breadcrumb-wrap">
     <div class="container">

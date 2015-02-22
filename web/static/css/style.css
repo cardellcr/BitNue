@@ -2397,8 +2397,12 @@ Version v1.1 css*
 }
 .navbar-inverse .navbar-nav>li>a:hover {
     color: #3498db;
-
 }
+.navbar-active {
+    color: #3498db !important;
+    background-color: transparent;
+}
+
 #header-top.dark-header-top{
     background-color: #1a1c25;
 }

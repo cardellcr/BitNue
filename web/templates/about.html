@@ -1,8 +1,16 @@
 {% extends "template.html" %}
 {% load staticfiles %}
 
-{% block content %}
+{% block menu %}
+  <ul class="nav navbar-nav navbar-right">
+      <li><a href=" {% url 'home' %} ">Home </a></li>
+      <li><a href=" {% url 'services' %} ">Serveis</a></li>
+      <li><a href=" {% url 'about' %} " class="navbar-active">Qui som</a></li>
+      <li><a href=" {% url 'contact' %} ">Contacte</a></li>
+  </ul>
+{% endblock %}
 
+{% block content %}
 <div class="breadcrumb-wrap">
     <div class="container">
         <div class="row">
@@ -22,11 +30,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 margin20">
-            <h3 class="heading">A little about us</h3>
+            <h3 class="heading">Una mica sobre noltros</h3>
             <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni. Dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+            Som una empresa especialitzada en disseny i desenvolupament web, ja sigui en Wordpress, prestashop o programació a mida.
+            
+            webs corporatives, tendes online, sistemes immobiliaris i en general qualsevol tipus de web
+
+            els nostres dissenys són responsive o adaptables a diferents formats de pantalla, tant tables o mòbils.
             </p>
-            <p><a href="#" class="btn border-black btn-lg">Our Services</a></p>
+            <p><a href="{% url 'services' %}" class="btn border-black btn-lg">Els nostres serveis</a></p>
         </div>
         <div class="col-md-6">
             <img src="{% static 'img/showcase-1.jpg' %}" class="img-responsive" alt="">
@@ -35,19 +47,19 @@
     <div class="divide60"></div>
     <div class="row">
         <div class="col-md-4 margin20">
-            <h3 class="heading">Whay hire us?</h3>
+            <h3 class="heading">Per què contractar-nos?</h3>
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                <i class="fa fa-desktop"></i>    100% Responsive Design
+                                <i class="fa fa-desktop"></i>    Webs a mida
                             </a>
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                          Mitjançant el desenvolupament web a mida, podem donar solució a totes les necessitats, fent que la plataforma web s'adapti totalment al client.
                         </div>
                     </div>
                 </div>
@@ -55,13 +67,13 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                <i class="fa fa-crop"></i>    Pixel Perfect Design 
+                                <i class="fa fa-crop"></i>    SEO | SEM 
                             </a>
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            Posicionam la seva web en els primers llocs dels principals cercadors.
                         </div>
                     </div>
                 </div>
@@ -69,53 +81,48 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                <i class="fa fa-cogs"></i>    Full Support
+                                <i class="fa fa-cogs"></i>    Som propers
                             </a>
                         </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            Som un grup de trebralladors Freelance, noltros xerram amb tu, t'assessoram de veritat, el personal tècnic que realitza la teva web serà el teu contacte directe per ajudar-te en la programació i disseny de la teva web o logotip.
                         </div>
                     </div>
                 </div>
             </div>
         </div><!--why hire us-->
         <div class="col-md-4 margin20">
-            <h3 class="heading">We are good at</h3>
+            <h3 class="heading">En què som bons</h3>
             <div class="skills-wrapper wow animated bounceIn animated" data-wow-delay="0.2s">
-                <h3 class="heading-progress">Web Design <span class="pull-right">88%</span></h3>
+                <h3 class="heading-progress">Disseny web <span class="pull-right">88%</span></h3>
                 <div class="progress">
                     <div class="progress-bar" style="width: 88%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="88" role="progressbar">
                     </div>
                 </div>
-                <h3 class="heading-progress">Web Development <span class="pull-right">78%</span></h3>
+                <h3 class="heading-progress">Desenvolupament web <span class="pull-right">78%</span></h3>
                 <div class="progress">
                     <div class="progress-bar" style="width: 78%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="78" role="progressbar">
                     </div>
                 </div>
-                <h3 class="heading-progress">Marketing <span class="pull-right">82%</span></h3>
+                <h3 class="heading-progress">Posicionament i marketing <span class="pull-right">82%</span></h3>
                 <div class="progress">
                     <div class="progress-bar" style="width: 82%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="82" role="progressbar">
                     </div>
                 </div>   
-                <h3 class="heading-progress">Photography <span class="pull-right">72%</span></h3>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 72%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="72" role="progressbar">
-                    </div>
-                </div> 
             </div><!--skills-->
         </div><!--col-->
         <div class="col-md-4 margin20">
-            <h3 class="heading">Our Highlights</h3>
+            <h3 class="heading">Tecnologies</h3>
             <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem dolor sit amet ipsum vitae.
+                Som uns apassionats de la tecnologia i estam sempre en continu procés d'actualització.
+                Aplicam les últimes tecnologies del mercat.
             </p>
             <ul class="list-unstyled highlight-list">
-                <li><i class="fa fa-check"></i> Lorem ipsum dollor sit amet</li>
-                <li><i class="fa fa-check"></i> Consectetur adipisicing elit</li>
-                <li><i class="fa fa-check"></i> Lorem ipsum dollor sit amet</li>
-                <li><i class="fa fa-check"></i> Consectetur adipisicing elit</li>
+                <li><i class="fa fa-check"></i> HTML5 i CSS3</li>
+                <li><i class="fa fa-check"></i> Prestashop per l'e-comerce</li>
+                <li><i class="fa fa-check"></i> Django pel desenvolupament d'aplicacions web</li>
             </ul>
         </div>
     </div><!--row of skills collapse and highlights-->
@@ -126,20 +133,20 @@
     <div class="container">               
         <div class="row">
             <div class="col-md-3 margin20 facts-in">
-                <h3><i class="fa fa-image"></i><span class="counter">6858</span></h3>
-                <h4>Projects Complete</h4>
+                <h3><i class="fa fa-image"></i><span class="counter">177</span></h3>
+                <h4>Projectes Completats</h4>
             </div><!--facts in-->
             <div class="col-md-3 margin20 facts-in">
-                <h3><i class="fa fa-users"></i><span class="counter">685</span></h3>
-                <h4>Happy Customers</h4>
+                <h3><i class="fa fa-users"></i><span class="counter">55</span></h3>
+                <h4>Clients feliços</h4>
             </div><!--facts in-->
             <div class="col-md-3 margin20 facts-in">
                 <h3><i class="fa fa-clock-o"></i><span class="counter">6000</span></h3>
-                <h4>Hours Work </h4>
+                <h4>Hores de feina </h4>
             </div><!--facts in-->
             <div class="col-md-3 margin20 facts-in">
                 <h3><i class="fa fa-coffee"></i><span class="counter">2500</span></h3>
-                <h4>Cups of tea</h4>
+                <h4>Tasses de cafè</h4>
             </div><!--facts in-->
         </div>
     </div>
@@ -149,20 +156,18 @@
     <div class="row">
         <div class="col-md-12">
             <div class="center-heading">
-                <h2>Leading team members</h2>
+                <h2>Equip</h2>
                 <span class="center-line"></span>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis</p>
             </div><!--center-heading-->
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3 margin20">
+        <div class="col-md-4 margin21">
             <div class="team-wrap">
                 <img src="{% static 'img/team-1.jpg' %}" class="img-responsive" alt="">
-                <h4>Jolly smith</h4>
-                <span>Web Designer</span>
+                <h4>Cati</h4>
+                <span>Experta en SEO | SEM</span>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
                 </p>
                 <ul class="list-inline social-1">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -171,28 +176,12 @@
                 </ul><!--social-->
             </div><!--team-wrap-->
         </div><!--team col-->
-        <div class="col-md-3 margin20">
-            <div class="team-wrap">
-                <img src="{% static 'img/team-2.jpg' %}" class="img-responsive" alt="">
-                <h4>Jolly smith</h4>
-                <span>Web Designer</span>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
-                </p>
-                <ul class="list-inline social-1">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                </ul><!--social-->
-            </div><!--team-wrap-->
-        </div><!--team col-->
-        <div class="col-md-3 margin20">
+        <div class="col-md-4 margin20">
             <div class="team-wrap">
                 <img src="{% static 'img/team-3.jpg' %}" class="img-responsive" alt="">
-                <h4>Jolly smith</h4>
-                <span>Web Designer</span>
+                <h4>Toni</h4>
+                <span>Programació i sistemes</span>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
                 </p>
                 <ul class="list-inline social-1">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -201,13 +190,12 @@
                 </ul><!--social-->
             </div><!--team-wrap-->
         </div><!--team col-->
-        <div class="col-md-3 margin20">
+        <div class="col-md-4 margin20">
             <div class="team-wrap">
                 <img src="{% static 'img/team-4.jpg' %}" class="img-responsive" alt="">
-                <h4>Jolly smith</h4>
-                <span>Web Designer</span>
+                <h4>Jaume</h4>
+                <span>Comercial i marketing</span>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
                 </p>
                 <ul class="list-inline social-1">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
