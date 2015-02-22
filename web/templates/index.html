@@ -1,6 +1,14 @@
 {% extends "template.html" %}
 {% load staticfiles %}
-{% load static %}
+
+{% block menu %}
+  <ul class="nav navbar-nav navbar-right">
+      <li><a href=" {% url 'home' %} " >Home </a></li>
+      <li><a href=" {% url 'services' %} ">Serveis</a></li>
+      <li><a href=" {% url 'about' %} ">Qui som</a></li>
+      <li><a href=" {% url 'contact' %} ">Contacte</a></li>
+  </ul>
+{% endblock %}
 
 {% block content %}
     <!--flex slider-->
@@ -226,79 +234,6 @@
         </div>
     </section><!--fun facts-->
     <div class="divide80"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="center-heading">
-                    <h2>Latest from blog</h2>
-                    <span class="center-line"></span>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div><!--center-heading-->
-            </div>
-        </div><!--row-->
-        <div class="row">
-            <div class="col-md-4 margin30">
-                <div class="latest-new">
-                  <img src="{% static 'img/img-6.jpg' %}" class="img-responsive" alt="">
-                    <div class="blog-date">
-                        <span>July</span> 1 
-                    </div>
-                    <div class="l-news-desc">
-                        <h3><a href="#">Lorem ipsum dollor</a></h3>
-                        <ul class="list-inline post-desc">
-                            <li>By <a href="#">Author</a></li>
-                            <li> <a href="#">Sports</a></li>
-                            <li><a href="#">3 Comments</a></li>
-                        </ul>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <p><a href="#" class="btn  border-theme">Read more</a></p>
-                    </div>
-                </div><!--latest news-->
-            </div><!--latest news col-->
-            <div class="col-md-4 margin30">
-                <div class="latest-new">
-                  <img src="{% static 'img/img-9.jpg' %}" class="img-responsive" alt="">
-                    <div class="blog-date">
-                        <span>July</span> 1 
-                    </div>
-                    <div class="l-news-desc">
-                        <h3><a href="#">Lorem ipsum dollor</a></h3>
-                        <ul class="list-inline post-desc">
-                            <li>By <a href="#">Author</a></li>
-                            <li> <a href="#">Sports</a></li>
-                            <li><a href="#">3 Comments</a></li>
-                        </ul>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <p><a href="#" class="btn    border-theme">Read more</a></p>
-                    </div>
-                </div><!--latest news-->
-            </div><!--latest news col-->
-            <div class="col-md-4 margin30">
-                <div class="latest-new">
-                  <img src="{% static 'img/img-9.jpg' %}" class="img-responsive" alt="">
-                    <div class="blog-date">
-                        <span>July</span> 1 
-                    </div>
-                    <div class="l-news-desc">
-                        <h3><a href="#">Lorem ipsum dollor</a></h3>
-                        <ul class="list-inline post-desc">
-                            <li>By <a href="#">Author</a></li>
-                            <li> <a href="#">Sports</a></li>
-                            <li><a href="#">3 Comments</a></li>
-                        </ul>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <p><a href="#" class="btn    border-theme">Read more</a></p>
-                    </div>
-                </div><!--latest news-->
-            </div><!--latest news col-->
-        </div>
-    </div><!--recent news-->
     <div class="divide60"></div>
 
 {% endblock %}

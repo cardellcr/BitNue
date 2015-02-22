@@ -12,3 +12,24 @@ def index(request):
   context = {'events': 'events', 'date': 'date'}
 
   return render_to_response("index.html", context)
+
+def services(request):
+  #events = Event.objects.filter(start_date__day = timezone.now().day)
+  #date = timezone.now()
+  context = {'events': 'events', 'date': 'date'}
+
+  return render_to_response("services.html", context)
+
+def about(request):
+  #events = Event.objects.filter(start_date__day = timezone.now().day)
+  #date = timezone.now()
+  context = {'events': 'events', 'date': 'date'}
+
+  return render_to_response("about.html", context)
+
+def contact(request):
+  #events = Event.objects.filter(start_date__day = timezone.now().day)
+  #date = timezone.now()
+  context = {'events': 'events', 'date': 'date'}
+
+  return render_to_response("contact.html", context)

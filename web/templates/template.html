@@ -87,12 +87,14 @@
                       <a class="navbar-brand" href="index.html"><img src="{% static 'img/logo.png' %}" alt="ASSAN"></a>
                   </div>
                   <div class="navbar-collapse collapse">
+                    {% block menu %}
                       <ul class="nav navbar-nav navbar-right">
-                          <li><a href="home-2.html" class="" data-toggle="dropdown">Home <i class="fa"></i></a></li>
-                          <li><a href="services.html">Serveis</a></li>
-                          <li><a href="about.html">Qui som</a></li>
-                          <li><a href="contact.html">Contacte</a></li>
+                          <li><a href=" {% url 'home' %} " >Home </a></li>
+                          <li><a href=" {% url 'services' %} ">Serveis</a></li>
+                          <li><a href=" {% url 'about' %} ">Qui som</a></li>
+                          <li><a href=" {% url 'contact' %} ">Contacte</a></li>
                       </ul>
+                    {% endblock %}
                   </div><!--/.nav-collapse -->
               </div>
           </div><!--.navbar-default-->
@@ -108,11 +110,11 @@
               <div class="container">
           
                   <div class="row">
-                      <div class="col-md-3 col-sm-6 margin30">
+                      <div class="col-md-4 col-sm-6 margin30">
                           <div class="footer-col">
-                              <h3>About BitNue</h3>
+                              <h3>BitNue</h3>
                               <p>
-                                  BitNue is the best web development in the world!
+                                 Especialistes en desenvolupament web
                               </p>
                               <ul class="list-inline social-1">
                                   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -122,42 +124,28 @@
                               </ul>
                           </div>                        
                       </div><!--footer col-->
-                      <div class="col-md-3 col-sm-6 margin30">
+                      <div class="col-md-4 col-sm-6 margin30">
                           <div class="footer-col">
-                              <h3>Contact</h3>
+                              <h3>Contacte</h3>
                               <ul class="list-unstyled contact">
-                                  <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> Gran, 165, Sa Pobla</p></li> 
-                                  <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">hola@bitnue.com</a></p></li>
-                                  <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +34 615 08 90 65</p></li>
+                                  <li><p><strong><i class="fa fa-map-marker"></i> Adreça:</strong> Gran, 165, Sa Pobla</p></li> 
+                                  <li><p><strong><i class="fa fa-envelope"></i> Mail:</strong> <a href="#">hola@bitnue.com</a></p></li>
+                                  <li> <p><strong><i class="fa fa-phone"></i> Telf:</strong> +34 615 08 90 65</p></li>
                                   <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> bitnue </p></li>
                               </ul>
                           </div>                        
                       </div><!--footer col-->
-                      <div class="col-md-3 col-sm-6 margin30">
-                          <div class="footer-col">
-                              <h3>Featured Work</h3>
-                              <ul class="list-inline f2-work">
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-1.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-2.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-3.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-4.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-5.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-6.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-7.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-8.jpg' %}" class="img-responsive" alt=""></a></li>
-                                  <li><a href="portfolio-single.html"><img src="{% static 'img/img-9.jpg' %}" class="img-responsive" alt=""></a></li>
-                              </ul>
-                          </div>                        
-                      </div><!--footer col-->
-                      <div class="col-md-3 col-sm-6 margin30">
+                      <div class="col-md-4 col-sm-6 margin30">
                           <div class="footer-col">
                               <h3>Newsletter</h3>
+                              <!--
                               <p>
                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, 
                               </p>
+                              -->
                               <form role="form" class="subscribe-form">
                                   <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Enter email to subscribe">
+                                      <input type="text" class="form-control" placeholder="Introdueix el teu correu per subscriure't">
                                       <span class="input-group-btn">
                                           <button class="btn  btn-theme-dark btn-lg" type="submit">Ok</button>
                                       </span>
